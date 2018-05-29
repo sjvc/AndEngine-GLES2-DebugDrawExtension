@@ -1,6 +1,11 @@
 buildscript {
     repositories {
         mavenCentral()
+        jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
     }
 
     dependencies {
@@ -8,11 +13,12 @@ buildscript {
     }
 }
 
+
 apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.0"
+    buildToolsVersion "26.0.2"
 
     defaultConfig {
         minSdkVersion 14
@@ -47,4 +53,10 @@ android {
 dependencies {
     compile project(':andEngine')
     compile project(':andEnginePhysicsBox2DExtension')
+}
+repositories {
+    maven {
+        url 'https://maven.google.com/'
+        name 'Google'
+    }
 }
