@@ -17,12 +17,11 @@ buildscript {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "26.0.2"
+    compileSdkVersion 26
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 25
+        targetSdkVersion 26
     }
 
     compileOptions {
@@ -46,13 +45,13 @@ android {
             assets.srcDirs = ['assets']
         }
 
-        instrumentTest.setRoot('tests')
+        // instrumentTest.setRoot('tests')
     }
 }
 
 dependencies {
-    compile project(':andEngine')
-    compile project(':andEnginePhysicsBox2DExtension')
+    implementation project(':andEngine')
+    implementation project(':andEnginePhysicsBox2DExtension')
 }
 repositories {
     maven {
