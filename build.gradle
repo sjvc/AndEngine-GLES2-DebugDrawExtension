@@ -17,17 +17,19 @@ buildscript {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 26
+    compileSdk 36
 
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 26
+        minSdk 23
+        targetSdk 36
     }
 
-    compileOptions {
+    namespace 'org.andengine.extension.debugdraw'
+
+    /*compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_7
         targetCompatibility JavaVersion.VERSION_1_7
-    }
+    }*/
 
     buildTypes {
         release {
